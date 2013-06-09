@@ -76,14 +76,14 @@ a simple "Hello World" example:
 
 ::
 
-    import xhtml2pdf.pisa                          (1)
+    import xhtml2pdf.pisa                             (1)
 
     def helloWorld():
-      filename = __file__ + ".pdf"               (2)
-      pdf = xhtml2pdf.pisa.CreatePDF(            (3)
+      filename = __file__ + ".pdf"                    (2)
+      pdf = xhtml2pdf.pisa.CreatePDF(                 (3)
         "Hello <strong>World</strong>",
         file(filename, "wb"))
-      if not pdf.err:                            (4)
+      if not pdf.err:                                 (4)
         xhtml2pdf.pisa.startViewer(filename)          (5)
 
     if __name__=="__main__":
@@ -130,10 +130,10 @@ following arguments in this order:
 Link callback
 -------------
 
-Images, backgrounds and stylesheets are loaded form an HTML document.
+Images, backgrounds and stylesheets are loaded from an HTML document.
 Normaly ``xhtml2pdf`` expects these files to be found on the local drive.
 They may also be referenced relative to the original document. But the
-programmer might want to load form different kind of sources like the
+programmer might want to load from different kind of sources like the
 Internet via HTTP requests or from a database or anything else.
 Therefore you may define a ``link_callback`` that handles these reuests.
 
